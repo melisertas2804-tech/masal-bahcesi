@@ -4,672 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Masal Bahçesi | Türk Masallarından Seçmeler</title>
-</head>
 
-<body>
-  <!-- ======================================================================
-       1. HTML
-       ====================================================================== -->
-
-  <!-- ÜST MENÜ -->
-  <header class="ust">
-    <a class="logo" href="#anasayfa">masal bahçesi</a>
-    <nav aria-label="Ana menü">
-      <a class="aktif" href="#anasayfa">Başlangıç</a>
-      <a href="#masallar">Masallar</a>
-      <a class="favori-link" href="#favoriler">Favorilerim <span class="favori-adet" id="favori-sayisi" aria-live="polite">0</span></a>
-      <a href="#hakkinda">Hakkında</a>
-    </nav>
-    <span class="ust-not">Anadolu halk anlatılarından bir seçki</span>
-  </header>
-
-  <main id="anasayfa-alani">
-
-    <!-- GİRİŞ -->
-    <section class="hero" id="anasayfa">
-      <div class="hero-icerik">
-        <div class="kucuk-etiket">ANADOLU MASALLARI · SAYI 01</div>
-        <h1>Bir varmış,<br><em>bir yokmuş...</em></h1>
-        <p>Sekiz halk masalı, günümüz Türkçesinde. Kurnaz hayvanlar, beklenmedik yolculuklar ve kuşaktan kuşağa aktarılan hikâyeler.</p>
-        <a class="ana-buton" href="#masallar">Masalları incele</a>
-        <div class="hero-alt">
-          <span>8 MASAL</span>
-          <span>GÜNÜMÜZ TÜRKÇESİNE UYARLAMA</span>
-        </div>
-      </div>
-      <div class="hero-cizim">
-        <div class="hero-resim gorsel1" role="img" aria-label="Anadolu köyü, açık masal kitabı ve fener içeren suluboya illüstrasyon"></div>
-      </div>
-    </section>
-
-    <!-- MASAL KATALOĞU -->
-    <section class="katalog" id="masallar">
-      <div class="baslik-ust">SEÇKİ / 01—08</div>
-      <div class="bolum-baslik">
-        <div>
-          <h2>Masalları keşfet.</h2>
-          <p>Bir başlık seç ve hikâyeye en başından başla.</p>
-        </div>
-        <span class="adet" id="adet">8 MASAL</span>
-      </div>
-
-      <div class="araclar">
-        <label class="arama">
-          <span>⌕</span>
-          <input type="search" id="arama" placeholder="Bir masal ara..." aria-label="Masallarda ara">
-        </label>
-        <div class="filtreler" role="group" aria-label="Masal türüne göre filtrele">
-          <button type="button" class="secili" data-filtre="Tümü">Tümü</button>
-          <button type="button" data-filtre="Hayvan masalı">Hayvan masalları</button>
-          <button type="button" data-filtre="Öğüt masalı">Öğüt masalları</button>
-          <button type="button" data-filtre="Olağanüstü masal">Olağanüstü masallar</button>
-          <button type="button" data-filtre="Halk hikâyesi">Halk hikâyeleri</button>
-        </div>
-      </div>
-
-      <div class="kartlar" id="kartlar">
-          <div class="masal-ogesi" data-masal="felek">
-            <button type="button" class="kart-favori" data-favori="felek" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-felek" data-arama="Felek Sadakat ve iyilik" data-tur="Halk hikâyesi">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel2" role="img" aria-label="Felek: Ağa için altın dolu heybe bulan hizmetçi"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">01</span>
-                <h3>Felek</h3>
-                <p>Sadakat ve iyilik</p>
-                <div class="kart-alt">
-                  <span>Halk hikâyesi</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="uc-haylaz">
-            <button type="button" class="kart-favori" data-favori="uc-haylaz" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-uc-haylaz" data-arama="Üç Haylaz Masalı Macera ve düşünceli davranmak" data-tur="Hayvan masalı">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel3" role="img" aria-label="Üç Haylaz Masalı: Horoz, hindi ve ördek yolda"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">02</span>
-                <h3>Üç Haylaz Masalı</h3>
-                <p>Macera ve düşünceli davranmak</p>
-                <div class="kart-alt">
-                  <span>Hayvan masalı</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="dervis">
-            <button type="button" class="kart-favori" data-favori="dervis" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-dervis" data-arama="Derviş İyilik ve davranışların sonuçları" data-tur="Öğüt masalı">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel4" role="img" aria-label="Derviş: Dervişe katmer veren yaşlı kadın"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">03</span>
-                <h3>Derviş</h3>
-                <p>İyilik ve davranışların sonuçları</p>
-                <div class="kart-alt">
-                  <span>Öğüt masalı</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="incili-cadir">
-            <button type="button" class="kart-favori" data-favori="incili-cadir" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-incili-cadir" data-arama="İncili Çadır Merak ve keşif" data-tur="Olağanüstü masal">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel5" role="img" aria-label="İncili Çadır: Genç kızın karşısına çıkan incilerle süslü çadır"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">04</span>
-                <h3>İncili Çadır</h3>
-                <p>Merak ve keşif</p>
-                <div class="kart-alt">
-                  <span>Olağanüstü masal</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="oksuz-kiz">
-            <button type="button" class="kart-favori" data-favori="oksuz-kiz" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-oksuz-kiz" data-arama="Öksüz Kız Umut ve iyilik" data-tur="Olağanüstü masal">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel6" role="img" aria-label="Öksüz Kız: Öksüz kızın konuşan ineğiyle arkadaşlığı"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">05</span>
-                <h3>Öksüz Kız</h3>
-                <p>Umut ve iyilik</p>
-                <div class="kart-alt">
-                  <span>Olağanüstü masal</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="kurnaz-kurt">
-            <button type="button" class="kart-favori" data-favori="kurnaz-kurt" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-kurnaz-kurt" data-arama="Kurnaz Kurt Masalı Kurnazlık ve korku" data-tur="Hayvan masalı">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel7" role="img" aria-label="Kurnaz Kurt Masalı: Köylülerin karşısındaki kurt"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">06</span>
-                <h3>Kurnaz Kurt Masalı</h3>
-                <p>Kurnazlık ve korku</p>
-                <div class="kart-alt">
-                  <span>Hayvan masalı</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="dort-ogut">
-            <button type="button" class="kart-favori" data-favori="dort-ogut" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-dort-ogut" data-arama="Dört Öğüt Bilgelik ve sabır" data-tur="Öğüt masalı">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel8" role="img" aria-label="Dört Öğüt: Yola çıkacak adama öğüt verilmesi"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">07</span>
-                <h3>Dört Öğüt</h3>
-                <p>Bilgelik ve sabır</p>
-                <div class="kart-alt">
-                  <span>Öğüt masalı</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="masal-ogesi" data-masal="inatci-horuz">
-            <button type="button" class="kart-favori" data-favori="inatci-horuz" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
-            <a class="masal-kart" href="#oku-inatci-horuz" data-arama="İnatçı Horoz Israr ve beklenmedik sonuçlar" data-tur="Hayvan masalı">
-              <div class="kart-kapak">
-                <div class="masal-resim gorsel9" role="img" aria-label="İnatçı Horoz: Kaval çalan horoz"></div>
-              </div>
-              <div class="kart-bilgi">
-                <span class="kart-sayi">08</span>
-                <h3>İnatçı Horoz</h3>
-                <p>Israr ve beklenmedik sonuçlar</p>
-                <div class="kart-alt">
-                  <span>Hayvan masalı</span>
-                  <span class="kart-ok">OKU →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-      </div>
-
-      <p class="bos" id="bos" hidden>Aradığın masalı bulamadık. Başka bir kelime dene.</p>
-    </section>
-
-    <!-- FAVORİLER -->
-    <section class="favoriler-bolum" id="favoriler" aria-labelledby="favoriler-baslik">
-      <div class="baslik-ust">KİŞİSEL SEÇKİN</div>
-      <div class="bolum-baslik">
-        <div>
-          <h2 id="favoriler-baslik">Favorilerim.</h2>
-          <p>Sevdiğin masalları burada bir araya getir ve dilediğin zaman yeniden oku.</p>
-        </div>
-        <span class="adet" id="favori-toplam" aria-live="polite">0 FAVORİ</span>
-      </div>
-
-      <div class="kartlar" id="favori-kartlar" hidden></div>
-
-      <div class="favori-bos" id="favori-bos">
-        <p>Henüz favori masalın yok. Beğendiğin masalın kalp simgesine dokunarak buraya ekleyebilirsin.</p>
-        <a href="#masallar">Masalları keşfet →</a>
-      </div>
-    </section>
-
-    <!-- MASAL METİNLERİ: Seçilen masal adres çubuğundaki #oku-... ile açılır. -->
-    <div id="hikayeler" aria-label="Masal okuma bölümü">
-        <section class="hikaye-panel" id="oku-felek" aria-labelledby="baslik-felek">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Halk hikâyesi</span>
-              <h1 id="baslik-felek">Felek</h1>
-              <p>Sadakat ve iyilik</p>
-              <button type="button" class="okuma-favori" data-favori="felek" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel2" role="img" aria-label="Felek: Ağa için altın dolu heybe bulan hizmetçi"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <article class="masal-metin">
-              <p>Bir zamanlar köylerden birinde, ailesiyle birlikte yaşayan varlıklı bir ağa varmış. Evi kalabalık, sofrası bereketliymiş. Çalışanları da onun yanında güven içinde yaşarmış. Ancak yıllar geçtikçe ağanın işleri bozulmuş, serveti azalmış. Eskisi kadar sözü de dinlenmez olmuş.</p>
-              <p>Bir akşam ağa, eşiyle birlikte ocağın başında otururken derin bir iç çekmiş: “Ah, felek!”</p>
-              <p>Yanlarında oturan genç hizmetçi şaşırmış. “Ağam, bir sorun mu var? Yanlış bir şey mi yaptık?” diye sormuş. Ağa başını sallamış: “Senin bir suçun yok evladım. Bütün bunları bana felek yaptı.”</p>
-              <p>Hizmetçi, ağasının sözlerini çok ciddiye almış. Feleğin kim olduğunu bilmiyormuş ama ağasını üzen bu kişiyi bulmaya karar vermiş. İki gün sonra ağanın eşinden yolculuk için bir torba ekmek istemiş. Nereye gittiğini söylemeden köyden ayrılmış.</p>
-              <p>Az gitmiş, uz gitmiş; köyleri, kasabaları dolaşmış. Bir gün bir kahvehaneye uğramış. Oturup dinlenirken müşterilerden biri garsona seslenmiş: “Felek, şu misafire bir çay getir!”</p>
-              <p>Hizmetçi duyduklarına inanamamış. İçinden, “Sonunda feleği buldum!” diye sevinmiş. Çayını içmiş, akşam olana kadar beklemiş. Herkes ayrılınca yalnızca garsonla kendisi kalmış.</p>
-              <p>Garson, “Kalacak yerin yoksa bu gece misafirim ol,” demiş. Fakat hizmetçi kapıyı kilitlemiş, anahtarı cebine koymuş ve garsonun karşısına dikilmiş: “Ağamın hakkını geri ver!”</p>
-              <p>Garson neye uğradığını şaşırmış. “Hangi ağa? Hangi hak? Ben sadece burada çalışan Felek'im,” diye anlatmaya çalışmış. Hizmetçi ise onun sözlerine inanmamış. Tartışma büyümüş; garson da korkuya kapılmış.</p>
-              <p>Sonunda garson, başından kurtulmak için bir yol düşünmüş: “Peki, hakkını göstereceğim. Dışarıda üç kavak var. İlk ikisinin değil, üçüncü ağacın dibini kaz. Aradığını orada bulacaksın.”</p>
-              <p>Hizmetçiye bir kazma ve kürek vermiş. Genç adam dışarı çıkınca garson hemen kahvehaneye dönmüş, kapıyı kilitleyip arkasına masaları dayamış. Bu garip olaydan sonra uyumaya çalışmış ama korkudan gözüne uyku girmemiş.</p>
-              <p>Bir süre sonra kapı çalınmış. “Açmam!” diye bağırmış garson. Dışarıdan hizmetçinin sesi duyulmuş: “Sana dokunmayacağım. Yalnızca bir heybe ver!”</p>
-              <p>Garson, kapıyı azıcık aralayıp heybeyi uzatmış. Hizmetçi uzaklaşmış. Çok geçmeden de heybeyi güçlükle taşıyarak geri dönmüş. Heybenin içi altınla doluymuş! Garson da hizmetçi de şaşkına dönmüş. Meğer üçüncü kavağın dibinde gerçekten bir hazine varmış.</p>
-              <p>Sabah olunca hizmetçi altınlarla birlikte yola koyulmuş. Günler sonra köyüne dönüp heybeyi ağasının önüne bırakmış: “Ağam, feleği buldum. Sana ait olduğunu düşündüğüm hakkı geri getirdim.”</p>
-              <p>Ağa ile eşi gördüklerine inanamamış. Ağa, altınların bir kısmını sadık hizmetçisine vermiş. Genç adam da vedalaşıp kendi köyüne dönmüş.</p>
-              <p>Ağa, “Biz onun kaçtığını sanıyorduk,” demiş eşine. “Oysa bizi düşünerek yollara düşmüş. Dünyada ne kadar temiz kalpli insanlar var!” O günden sonra hizmetçinin bağlılığını hiç unutmamışlar.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/felek" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-uc-haylaz">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>Üç Haylaz Masalı</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-uc-haylaz" aria-labelledby="baslik-uc-haylaz">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Hayvan masalı</span>
-              <h1 id="baslik-uc-haylaz">Üç Haylaz Masalı</h1>
-              <p>Macera ve düşünceli davranmak</p>
-              <button type="button" class="okuma-favori" data-favori="uc-haylaz" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel3" role="img" aria-label="Üç Haylaz Masalı: Horoz, hindi ve ördek yolda"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
-
-            <article class="masal-metin">
-              <p>Bir varmış, bir yokmuş. Uzak bir ülkede, çiçeklerle çevrili bir çiftlik varmış. Bu çiftlikte birbirinden ayrılmayan üç arkadaş yaşarmış: Kısa boylu bir horoz, gururlu bir hindi ve paytak paytak yürüyen bir ördek.</p>
-              <p>Üçü de çiftlikte her gün aynı şeyleri yapmaktan sıkılmış. Bir gün bir araya gelip konuşmuşlar. “Dışarıda kocaman bir dünya var,” demiş horoz. Hindi, “Dağları aşalım, yeni yerler görelim,” diye eklemiş. Ördek de heyecanla başını sallamış. Böylece fazla düşünmeden çiftlikten ayrılmaya karar vermişler.</p>
-              <p>Sabah erkenden yola çıkmışlar. Çiçekli tarlalardan geçmiş, dereleri aşmış, yemyeşil tepelerde dolaşmışlar. Güneş ışıl ışılmış; üç arkadaş da özgürlüğün tadını çıkarıyormuş. Başta her şey çok güzelmiş.</p>
-              <p>Fakat günler geçtikçe işleri zorlaşmış. Ne önlerine yem koyan biri varmış ne de onlara su getiren. Geceler soğuk, yollar yorucuymuş. Üçü de eski çiftliklerini özlemeye başlamış.</p>
-              <p>“Orada yemeğimiz hazırdı,” demiş ördek. “Kendimizi bu kadar düşüncesizce yola atmasaydık,” diye söylenmiş hindi. Horoz da hak vermiş ama geri dönmeyi gururlarına yedirememişler.</p>
-              <p>Akşam karanlığı çökerken dağın yamacında dev gibi bir yaratık belirmiş. Üç arkadaş korkudan oldukları yerde kalakalmış. Sonra birbirlerine bakıp var güçleriyle kaçmışlar.</p>
-              <p>Az gitmişler, uz gitmişler; sonunda kendilerini Hindistan'da bulmuşlar. Burası kalabalık, hareketli, eğlenceli bir yermiş. İnsanlar gösterileri izlemekten çok hoşlanıyormuş. Üç arkadaş da yeteneklerini kullanıp küçük gösteriler yapmaya başlamış. Horoz ötmüş, hindi kabarmış, ördek komik adımlar atmış. Böylece para kazanmışlar.</p>
-              <p>“Artık geçinecek kadar paramız var,” demişler. “Eve dönme zamanı!”</p>
-              <p>Ama dönüş yolunda bir mağara görmüşler. Merak edip içeri girdiklerinde gözlerine inanamamışlar: Her yer değerli eşyalar ve hazinelerle doluymuş. Mağaranın, dağda karşılaştıkları deve ait olduğunu bilmiyorlarmış.</p>
-              <p>Başta yalnızca bakacaklarını söylemişler. Sonra daha fazlasını istemiş, yanlarına alabildikleri kadar hazine toplamaya başlamışlar. Tam mağaradan çıkacakları sırada bir tilki ortaya çıkmış. Üç haylaz, onun elinden kurtulamamış.</p>
-              <p>Bu masalın sonunda anlatıcı şu öğüdü verir: Düşünmeden alınan kararlar ve açgözlülük, insanı beklemediği tehlikelere sürükleyebilir.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/uchaylazmasali" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-dervis">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>Derviş</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-dervis" aria-labelledby="baslik-dervis">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Öğüt masalı</span>
-              <h1 id="baslik-dervis">Derviş</h1>
-              <p>İyilik ve davranışların sonuçları</p>
-              <button type="button" class="okuma-favori" data-favori="dervis" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel4" role="img" aria-label="Derviş: Dervişe katmer veren yaşlı kadın"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
-
-            <article class="masal-metin">
-              <p>Bir zamanlar bir köyde yaşlı bir kadın yaşarmış. Bu kadının evine her gün bir derviş uğrarmış. Derviş, her geldiğinde aynı sözü söylermiş: “İnsan ne yaparsa sonunda kendine yapar.”</p>
-              <p>Kadın, dervişin bu sözünü duymaktan iyice bıkmış. Bir gün kendi kendine, “Keşke artık gelmese!” diye söylenmiş. Ne yazık ki öfkesine yenik düşüp çok kötü bir karar vermiş: Bir katmer hazırlamış ve içine zehir koymuş.</p>
-              <p>Derviş o gün de kapıyı çalmış. Her zamanki gibi, “İnsan ne yaparsa sonunda kendine yapar,” demiş. Kadın katmeri ona vermiş. Derviş teşekkür etmiş, yiyeceği yanına alıp yola çıkmış.</p>
-              <p>Bir süre sonra karşısına askerlikten dönen genç bir adam çıkmış. Delikanlı çok acıkmış; uzun süredir ağzına lokma koymamış. Dervişin elindeki katmeri görünce, “Amca, çok açım. Yiyeceğinden biraz verir misin?” diye rica etmiş.</p>
-              <p>Derviş, katmerin içinde ne olduğunu bilmediği için hiç düşünmeden onu gence vermiş. Genç adam katmeri yemiş ve kısa bir süre sonra kendini kötü hissetmeye başlamış. Güçlükle evine ulaşmış.</p>
-              <p>Annesi onu bu hâlde görünce telaşlanmış. “Ne oldu sana oğlum?” diye sormuş. Genç, yolda tanıştığı dervişin verdiği katmeri yediğini, ardından hastalandığını anlatmış.</p>
-              <p>Kadın duyduklarına inanamamış. Çünkü genç adam, kadının askerlikten dönen kendi oğluymuş. Zehirli katmeri de dervişe vermek için kendisi hazırlamış! Yaptığının sonucunu anladığında büyük bir pişmanlık yaşamış. Ancak artık çok geçmiş; oğlu hayatını kaybetmiş.</p>
-              <p>Kadın, dervişin sürekli tekrarladığı sözü hatırlamış: “İnsan ne yaparsa sonunda kendine yapar.”</p>
-              <p>Masal, başkasına zarar vermek için yapılan kötülüğün dönüp insanın kendi hayatını da altüst edebileceğini anlatır.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/dervis" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-incili-cadir">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>İncili Çadır</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-incili-cadir" aria-labelledby="baslik-incili-cadir">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Olağanüstü masal</span>
-              <h1 id="baslik-incili-cadir">İncili Çadır</h1>
-              <p>Merak ve keşif</p>
-              <button type="button" class="okuma-favori" data-favori="incili-cadir" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel5" role="img" aria-label="İncili Çadır: Genç kızın karşısına çıkan incilerle süslü çadır"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <article class="masal-metin">
-              <p>Bir varmış, bir yokmuş. Çok eski zamanlarda, bir padişah ile eşi uzun yıllar çocuk sahibi olamamış. Bu durum ikisini de üzüyormuş. Bir gün padişah, derdine çare aramak için vezirlerini yanına alıp yolculuğa çıkmış.</p>
-              <p>Günlerce yol aldıktan sonra dinlenmek için mola vermişler. Tam o sırada tepelerin ardından ak sakallı, güler yüzlü bir ihtiyar gelmiş. Padişahın yanına yaklaşarak onu selamlamış. Padişah şaşırmış: “Kim olduğumu biliyorsan derdimi de biliyorsundur,” demiş.</p>
-              <p>İhtiyar, “Biliyorum,” diye cevap vermiş. Cebinden bir elma çıkarıp padişaha uzatmış: “Bunun yarısını sen, yarısını eşin yesin. Umudunuzu da kaybetmeyin.” Sonra gözden kaybolmuş.</p>
-              <p>Bir süre sonra padişah ile eşinin bir kızları olmuş. Bebek büyüdükçe güzelleşmiş. Bir gün yaşlı vezirlerden biri, güzelliğinin ileride başlarına dert açabileceğini söylemiş. Padişah da bu sözlerden etkilenip kızını koruyacağını düşünerek yerin altında bir saray yaptırmış.</p>
-              <p>Küçük kız, dadısıyla birlikte bu sarayda büyümüş. Dadısı ona okumayı, yazmayı ve pek çok şeyi öğretmiş; ancak dışarıdaki dünyadan hiç söz etmemiş. Kızın güneşten, ağaçlardan, gökyüzünden haberi olmamış.</p>
-              <p>Yıllar geçmiş, genç kız on beş yaşına gelmiş. Bir akşam yemek yerken dadısı, “Kemiğe dikkat et, boğazına kaçmasın,” demiş. Kız kemiği pencereden atmak istemiş ama camı kırmış. İçeriye ince bir ışık süzülmüş.</p>
-              <p>Genç kız daha önce hiç görmediği bu parlak şeyi yakalamaya çalışmış. Sonra ışığın nereden geldiğini merak etmiş. Gece herkes uyurken gizlice dışarı çıkmış. İlk kez ay ışığını, tepeleri ve uzaktaki evleri görmüş.</p>
-              <p>Yakınlarda, ışıkları yanan birçok çadır varmış. Bunların arasında incilerle süslenmiş bir çadır dikkatini çekmiş. Kapıdaki nöbetçiler uyuyormuş. Kız içeri girmiş. Çadırın içinde uyuyan bir delikanlı, bir masa dolusu yiyecek, bir bardak su, katlanmış bir gömlek ve iki şamdan varmış.</p>
-              <p>Kız merakına yenilmiş. Gömleği açmış, şamdanların yerlerini değiştirmiş, yemeklerden biraz yemiş ve suyun yarısını içmiş. Sonra da geldiği yere dönmüş.</p>
-              <p>Delikanlı sabah uyandığında çadırdaki değişiklikleri fark etmiş. Ertesi gece uyanık kalmak için başının üstüne, içinden soğuk su damlayan bir kar torbası asmış. Genç kız yeniden geldiğinde onu görmüş ve kolundan tutarak, “Sen kimsin?” diye sormuş.</p>
-              <p>Kız, “Ben de senin gibi bir insanım,” diye cevap vermiş. O gece konuşup tanışmışlar. Ancak ertesi sabah genç kız uyandığında çadır da delikanlı da ortada yokmuş.</p>
-              <p>Meğer delikanlı başka bir ülkenin padişahının oğluymuş. Düğün öncesi gelenek gereği arkadaşlarıyla kırk gün boyunca dağda kalmış. O gün kırkıncı gün olduğu için herkes çadırlarını toplamış, ülkelerine dönmüş.</p>
-              <p>Genç kız üzülmüş ama vazgeçmemiş. Yoldan geçen bir çobandan buranın adının Şehvaneli olduğunu öğrenmiş. Üzerindeki değerli eşyaları çobana verip karşılığında eski kıyafetlerini ve başına geçireceği bir koyun postu almış. Böylece kılık değiştirip yola çıkmış. Kendisine de “Abdal” adını vermiş.</p>
-              <p>Sonunda padişahın oğluyla karşılaşmış. Delikanlı, “Nereden geliyorsun?” diye sormuş. “Şehvaneli'den,” demiş Abdal. “Orada ne gördün?”</p>
-              <p>“İncilerle süslü bir çadır, açılmış bir gömlek, yerleri değişmiş şamdanlar ve sevdiğini arayan bir genç kız,” diye cevap vermiş. Ardından çadırdaki geceyi hatırlatan sözler söylemiş.</p>
-              <p>Delikanlı bu sözlerden karşısındaki kişinin aradığı genç kız olduğunu anlamış. Birbirlerine kavuşmuşlar ve masal, onların mutluluğuyla sona ermiş.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/incilicadir" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-oksuz-kiz">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>Öksüz Kız</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-oksuz-kiz" aria-labelledby="baslik-oksuz-kiz">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Olağanüstü masal</span>
-              <h1 id="baslik-oksuz-kiz">Öksüz Kız</h1>
-              <p>Umut ve iyilik</p>
-              <button type="button" class="okuma-favori" data-favori="oksuz-kiz" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel6" role="img" aria-label="Öksüz Kız: Öksüz kızın konuşan ineğiyle arkadaşlığı"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
-
-            <article class="masal-metin">
-              <p>Bir zamanlar annesi, babası ve kendisiyle yaşayan küçük bir kız varmış. Annesi ölünce babası yeniden evlenmiş. Yeni eşi, yani kızın üvey annesi, ona hiç iyi davranmıyormuş.</p>
-              <p>Her gün kızı hayvanları otlatması için kırın yoluna gönderir, yanına da yalnızca bir dilim arpa ekmeği verirmiş. Küçük kız açlıktan ve üzüntüden ağlarmış. Bir gün otlattığı inek konuşmaya başlamış: “Üzülme. Ekmeğini bana ver. Sen de kulağıma gir; içeride güzel yemekler bulacaksın.”</p>
-              <p>Kız önce şaşırmış, sonra ineğin dediğini yapmış. Gerçekten de ineğin kulağında çeşit çeşit yiyecek varmış. O günden sonra karnını doyurabiliyormuş.</p>
-              <p>Üvey anne, kendi kızına güzel yemekler yedirdiği hâlde öksüz kızın giderek daha sağlıklı ve neşeli olduğunu görünce şüphelenmiş. Bir gün kendi kızını aynı arpa ekmeğiyle kırın yoluna göndermiş. Ancak inek ona yardım etmemiş. Kız, sert ekmeği yiyemediğini söyleyerek eve dönmüş.</p>
-              <p>Üvey anne bu kez öksüz kıza bir tutam pamuk ve bir iğ vermiş: “Akşama kadar bunlardan incecik iplik eğireceksin!”</p>
-              <p>Küçük kız yine ağlamaya başlamış. İnek onun neden üzüldüğünü sorunca olanları anlatmış. İnek, “Pamuğu bana ver,” demiş. Pamuğu yutmuş, kulağından da çok ince bir iplik çıkarmış. Kız ipliği düzgünce sarmış ve eve götürmüş.</p>
-              <p>Herkes kızın bu kadar güzel iplik eğirmesine şaşırmış. Üvey anne, ineğin yardım ettiğini anlayınca hayvanı kestirmeye karar vermiş. Babası itiraz etse de onu vazgeçirememiş. Küçük kız, çok sevdiği ineğinin yanına gidip ağlamış.</p>
-              <p>İnek son kez konuşmuş: “Benim için üzülme. Kemiklerimi beyaz bir beze sarıp yemliğin altına koy. Zamanı gelince sana yardım ederler.”</p>
-              <p>Kız, ineğin söylediklerini yapmış. Aradan birkaç ay geçmiş. Bir gün sarayda büyük bir düğün yapılacağı duyurulmuş. Üvey anne kendi kızını hazırlamış, öksüz kızıysa evde bırakmış. Üstelik ona yapılması neredeyse imkânsız iki iş vermiş: Büyük bir kazanı gözyaşıyla dolduracak, birbirine karıştırılmış buğday ve mercimekleri ayıracakmış.</p>
-              <p>Kız ağlarken kapıdan geçen bir tuz satıcısı onu görmüş. Durumu öğrenince, “Gözyaşı tuzludur. Kazana su ve tuz koyarsan sana verilen işi yerine getirmiş olursun,” demiş. Biraz sonra kapıdan geçen kalbur satıcıları da buğdayla mercimeği elekten geçirip ayırmasına yardım etmiş.</p>
-              <p>İşler bitince kız, ineğin kemiklerini bıraktığı yere gitmiş. Yemliğin altında güzel elbiseler ve bir at bulmuş. Hemen giyinip ata binmiş, saraydaki düğüne gitmiş.</p>
-              <p>Düğüne katılanlar, öksüz kızı görünce onu bir padişah kızı sanmışlar. Üvey anneyle kızı bile onu tanıyamamış. Küçük kız bir süre eğlendikten sonra eve herkesten önce dönmek için aceleyle ayrılmış. Ancak yolda ayakkabılarından biri çeşmeye düşmüş.</p>
-              <p>Daha sonra padişahın oğlu atını sulamak için çeşmeye geldiğinde ayakkabıyı bulmuş. Sahibinin kim olduğunu merak etmiş ve “Bu ayakkabı kimin ayağına uyarsa onunla evleneceğim,” demiş.</p>
-              <p>Ayakkabı pek çok kişiye denenmiş; kimine büyük, kimine küçük gelmiş. Sonunda öksüz kızın ayağına tam olmuş. Böylece düğündeki gizemli kızın kim olduğu anlaşılmış. Padişahın oğluyla evlenmiş, zorlu günleri geride kalmış.</p>
-              <p>Masal, iyiliğin ve umudun en zor zamanlarda bile insanın yolunu aydınlatabileceğini anlatır.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="kredi">Kültür Portalı kaynak sayfasında belirtilen illüstratör: Özlem Mengilli. Orijinal kaynak görseli bu sitede kullanılmamıştır.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/oksuzkiz" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-kurnaz-kurt">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>Kurnaz Kurt Masalı</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-kurnaz-kurt" aria-labelledby="baslik-kurnaz-kurt">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Hayvan masalı</span>
-              <h1 id="baslik-kurnaz-kurt">Kurnaz Kurt Masalı</h1>
-              <p>Kurnazlık ve korku</p>
-              <button type="button" class="okuma-favori" data-favori="kurnaz-kurt" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel7" role="img" aria-label="Kurnaz Kurt Masalı: Köylülerin karşısındaki kurt"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
-
-            <article class="masal-metin">
-              <p>Bir varmış, bir yokmuş. Uzak bir dağın tepesinde çok kurnaz ve güçlü bir kurt yaşarmış. Geceleri dağdan iner, köydeki hayvanlara saldırırmış. Köylüler onun yüzünden büyük sıkıntı çekiyormuş.</p>
-              <p>Bir gün köylüler bir araya gelmiş. “Böyle devam edemeyiz,” demişler. Kurdu yakalamak için dağa çıkmış, günlerce iz sürmüşler. Sonunda birkaç tuzak kurmayı başarmış ve kurdu yakalayıp köy odasına getirmişler.</p>
-              <p>Köylüler kurda sormuş: “Neden hayvanlarımızı yiyorsun? Geçimimizi onlarla sağlıyoruz.”</p>
-              <p>Kurt, “Ben de aç kalıyorum,” diye cevap vermiş. “Siz ekmek yiyorsunuz, ben et. Her gün bana bir kilo et getirirseniz hayvanlarınıza dokunmam.”</p>
-              <p>Köylüler başka çare bulamamış ve kabul etmiş. Kurda dağda bir yer hazırlamışlar. Her gün bir aile sırası geldiğinde ona et götürüyormuş.</p>
-              <p>Fakat zaman geçmiş, bu anlaşma köylülerin işini daha da zorlaştırmış. Hayvanları azalmış, yiyecek bulmak güçleşmiş. Sonunda kurda et götürmeyi bırakmışlar.</p>
-              <p>Kurt bir gün beklemiş, iki gün beklemiş. Kimse gelmeyince açlıktan öfkelenmiş. Yuvasından çıkıp yeniden köye inmiş. O sırada otlayan bir eşekle sıpasını görmüş. İkisine de saldırıp etlerinden birer parça yemiş. Sonra yuvasına dönmüş.</p>
-              <p>Eşekle sıpa yaralı hâlde evlerine gelince sahipleri çok üzülmüş. Olanları diğer köylülere anlatmış. Köylüler kurdu bir kez daha yakalayıp köy odasına getirmiş.</p>
-              <p>“Bize söz vermiştin,” demişler. “Neden eşeğe ve sıpaya saldırdın?”</p>
-              <p>Kurt soğukkanlı görünmeye çalışmış: “Et getirmezseniz hayvanlarınızı yine yerim!”</p>
-              <p>Köylüler, “Ama artık neredeyse hiç hayvanımız kalmadı,” deyince kurt daha da sert konuşmuş: “Beni ilgilendirmez. İstersem size de zarar veririm!”</p>
-              <p>Bu sözleri duyan köylüler korkmuş ve odadan çıkmış. Kurt ise kimse kalmayınca derin bir nefes almış. Aslında o da köylülerden çok korkuyormuş! Sadece güçlü görünerek kendini kurtarmaya çalışmış.</p>
-              <p>Kurt fırsattan yararlanıp köyden kaçmış. Uzak diyarlara gitmiş ve bir daha geri dönmemiş. Köylüler de sonunda rahat bir nefes almış.</p>
-              <p>Masal, korkutarak güçlü görünmeye çalışan birinin bazen kendisinin de korku içinde olabileceğini hatırlatır.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="kredi">Kültür Portalı kaynak sayfasında belirtilen illüstratör: Özlem Mengilli. Orijinal kaynak görseli bu sitede kullanılmamıştır.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/kurnazkurtmasali" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-dort-ogut">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>Dört Öğüt</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-dort-ogut" aria-labelledby="baslik-dort-ogut">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Öğüt masalı</span>
-              <h1 id="baslik-dort-ogut">Dört Öğüt</h1>
-              <p>Bilgelik ve sabır</p>
-              <button type="button" class="okuma-favori" data-favori="dort-ogut" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel8" role="img" aria-label="Dört Öğüt: Yola çıkacak adama öğüt verilmesi"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
-
-            <article class="masal-metin">
-              <p>Bir zamanlar geçimini sağlamakta zorlanan genç bir adam varmış. Evlenmiş ama ailesine bakacak kadar para kazanamıyormuş. Sonunda çalışmak için uzak bir diyara gitmeye karar vermiş. Bir ağanın yanında işe başlamış; günlüğünü bile sormadan tam yirmi yıl boyunca çalışmış.</p>
-              <p>Yirmi yılın sonunda memleketini, eşini ve annesini çok özlemiş. Ağanın yanına gidip, “Artık eve dönmek istiyorum. Emeğimin karşılığını verir misin?” demiş. Ağa ona üç lira vermiş. Adam parayı almış. Ağanın eşi ise ona acımış, bir çörek hazırlamış. Çöreğin içine gizlice beş altın koymuş ve “Bunu yolda yeme; evine götür, eşine armağan et,” demiş.</p>
-              <p>Adam tam ayrılacakken ağa onu çağırmış: “İstersen sana bir öğüt vereyim; karşılığında bir lira isterim.” Adam bir lira vermiş. Ağa, “Gece vakti bilmediğin yollara çıkma,” demiş.</p>
-              <p>Ağa ikinci bir lira daha isteyip, “Dibini görmediğin sudan geçme,” diye öğüt vermiş. Adam son lirasını da verince üçüncü öğüdü söylemiş: “Gerçeğini bilmediğin bir konuda hüküm verme.”</p>
-              <p>Adam gitmek üzereyken ağa bu kez ücretsiz bir öğüt eklemiş: “Ne olduğunu anlamadığın işe aceleyle karışma.”</p>
-              <p>Adam, cebindeki bütün parasını vermiş olmasına rağmen öğütleri aklında tutarak yola koyulmuş.</p>
-              <p>Bir süre sonra Yozgat'a giden bir kervana rastlamış ve onlarla birlikte yürümeye başlamış. Hava kararınca adam durmuş. “Ben gece yola devam etmeyeceğim,” demiş. Kervancılar ona gülmüş ama adam kararını değiştirmemiş. Sabah yola çıktığında kervanın eşkıyaların saldırısına uğradığını ve kervancıların öldürüldüğünü görmüş. “İlk öğüt hayatımı kurtardı,” diye düşünmüş.</p>
-              <p>Yoluna devam ederken bir atlıyla karşılaşmış. Birlikte giderken önlerine derin bir ırmak çıkmış. Atlı, “Gel, atıma bin, birlikte geçelim,” demiş. Adam suyun dibini göremeyince ikinci öğüdü hatırlamış ve kabul etmemiş. Atlı ırmağa girmiş ama akıntıya kapılarak kaybolmuş. Adam başka bir geçit bulup yoluna devam etmiş.</p>
-              <p>Akşamüstü bir köye ulaşmış. Köy odasında konuk olmuş. İçeride garip bir manzara varmış: Bir kadın, boynuna bağlanmış bir iple duvara bağlı tutuluyor; bir köpekse yatakta uzanıyormuş. Önce köpeğe yemek veriliyor, artanı kadına bırakılıyormuş. Adam bunu görünce şaşırmış ama ne olup bittiğini bilmediği için soru sormamış.</p>
-              <p>Ertesi sabah köyün ağası onu çağırtmış. “Burada gördüklerini neden sorgulamadın?” diye sormuş. Adam, “Bana gerçeğini bilmediğim bir konuda hüküm vermemem öğütlendi,” demiş. Köyün ağası bu cevabı beğenmiş. Meğer olup biteni soran konuklara kötü davranan zalim bir adammış; bu kez konuk susunca ona dokunmamış, hatta bir heybe altın verip adamlarıyla evine göndermiş.</p>
-              <p>Yıllar sonra nihayet köyüne ulaşan adam, evinin penceresinden içeri bakmış. Eşinin yanında genç bir erkek varmış. Adam bir an kıskançlığa kapılmış; tüfeğine davranmış. Ancak son öğüt aklına gelmiş: “Gerçeğini bilmediğin işe aceleyle karışma.”</p>
-              <p>Silahını indirmiş, kapıyı çalmış. Eşi kapıyı açınca önce onu tanıyamamış, sonra sevinçle boynuna sarılmış. Adam, evde gördüğü gencin kim olduğunu sormuş. Eşi, “Sen giderken henüz doğmamış olan oğlumuz,” diye cevap vermiş.</p>
-              <p>Adam hem ailesine kavuştuğu için sevinmiş hem de acele karar vermediği için şükretmiş. O gün, ağanın öğütlerinin paradan çok daha değerli olduğunu anlamış.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/dortogut-1" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-inatci-horuz">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>İnatçı Horoz</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="hikaye-panel" id="oku-inatci-horuz" aria-labelledby="baslik-inatci-horuz">
-          <div class="okuma-wrap">
-            <a class="geri" href="#masallar">← Masal listesine dön</a>
-
-            <div class="okuma-hero">
-              <span class="okuma-tur">Hayvan masalı</span>
-              <h1 id="baslik-inatci-horuz">İnatçı Horoz</h1>
-              <p>Israr ve beklenmedik sonuçlar</p>
-              <button type="button" class="okuma-favori" data-favori="inatci-horuz" aria-pressed="false">♡ Favorilere ekle</button>
-              <div class="okuma-kapak">
-                <div class="masal-resim gorsel9" role="img" aria-label="İnatçı Horoz: Kaval çalan horoz"></div>
-              </div>
-            </div>
-
-            <div class="okuma-kontrol">
-              <span>OKUMA AYARLARI</span>
-              <div class="okuma-butonlar">
-                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
-                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
-              </div>
-            </div>
-
-            <article class="masal-metin">
-              <p>Bir varmış, bir yokmuş. Bir köyde çok inatçı bir horoz yaşarmış. Bir gün çöplükte eşelenirken ayağına bir diken batmış. Canı yanınca yakındaki evin kapısını çalmış. Evdeki yaşlı kadın horoza yardım etmiş ve dikeni ayağından çıkarmış.</p>
-              <p>Horoz teşekkür edip gitmiş. Fakat birkaç gün sonra geri dönmüş: “Nine, ayağımdan çıkardığın dikeni geri ver!” demiş.</p>
-              <p>Kadın şaşırmış. “O dikeni çoktan mangala atıp yaktım,” diye cevap vermiş. Horoz, “Öyleyse ya dikenimi verirsin ya da mangalı alırım!” diye tutturmuş. Kadın ne dediyse horozu ikna edememiş. Sonunda mangalı verip onu uğurlamış.</p>
-              <p>Horoz mangalı sırtına alarak yola çıkmış. Bir başka eve gelmiş. Ev sahibine, “Bu mangalı biraz burada bırakayım, dönüşte alırım,” demiş. Kadın da mangalı ahıra koymuş.</p>
-              <p>Bir süre sonra horoz geri gelmiş. Fakat kadın, “Ahırdaki inek mangalı kırdı,” demiş. Horoz hemen itiraz etmiş: “Ya mangalımı verirsin ya da ineğini alırım!”</p>
-              <p>Kadın yine uzun uzun konuşmuş ama horoz inat etmiş. Sonunda ineği ona vermiş.</p>
-              <p>Horoz bu kez ineği önüne katıp yürümüş. Başka bir eve vardığında ineği oraya emanet etmiş ve yoluna devam etmiş. Günlerce dolaşıp geri döndüğünde evde düğün hazırlığı varmış. Ev sahibi ona, “İneğini kestik; şimdi ne yapacağız?” demiş.</p>
-              <p>Horoz gözünü düğündeki geline dikmiş. “Öyleyse gelini alırım!” diye tutturmuş. Ev sahibi ona altınlar önermiş, başka şeylerle gönlünü almaya çalışmış ama horoz bir türlü vazgeçmemiş. Masalın eski anlatısında, sonunda gelin onunla birlikte yola çıkmış.</p>
-              <p>Yolda bir çobana rastlamışlar. Çoban kaval çalıyormuş. Horoz melodiyi çok sevmiş. Bu kez kavalı istemiş ve karşılığında gelini çobana bırakmış.</p>
-              <p>Kavalı alıp kümesine dönmüş. Tavukların karşısına geçerek başından geçenleri bir bir anlatmış: “Dikenimi verdim, mangal aldım. Mangalımı verdim, inek aldım. İneğimi verdim, gelin aldım. Gelini verdim, kaval aldım!”</p>
-              <p>Sonra kavalına üflemiş: “Düüüt!” Ve böylece inatçı horozun tuhaf yolculuğu sona ermiş.</p>
-            </article>
-
-            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
-            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
-            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/inatcihoruz" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
-
-            <a class="sonraki" href="#oku-felek">
-              <span>SIRADAKİ MASAL →</span>
-              <strong>Felek</strong>
-            </a>
-          </div>
-        </section>
-    </div>
-
-    <!-- KOLEKSİYON NOTU -->
-    <section class="hakkinda" id="hakkinda">
-      <div class="arsiv-sol" aria-hidden="true">
-        <span class="arsiv-numara">MASAL BAHÇESİ / DERLEME 01</span>
-        <p class="arsiv-alinti">Bir masal, bazen yalnızca bir hikâye değil; bir kuşağın sesidir.</p>
-        <span class="arsiv-dipnot">8 anlatı  /  1 koleksiyon</span>
-      </div>
-      <div>
-        <span class="baslik-ust">BU KOLEKSİYON HAKKINDA</span>
-        <h2>Eski masallar, yeni bir okuma deneyimi.</h2>
-        <p>Bu sayfada sekiz Türk halk masalını bir araya getirdim. Metinleri, özgün olay örgülerini ve karakterlerini koruyarak günümüz Türkçesine uyarladım. Okuma alanını sade tuttum; arama, tür filtresi ve yazı boyutu kontrollerini ekledim.</p>
-        <p class="ince">Kaynak metinler T.C. Kültür Portalı’ndan alınmıştır. Geleneksel anlatıların bir bölümünde ölüm, şiddet ve zorlayıcı durumlar yer alır. Küçük okurların bir yetişkinle birlikte okuması önerilir.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ALT BİLGİ -->
-  <footer>
-    <span class="footer-mark">masal bahçesi</span>
-    <p>Türk halk masallarından bir derleme · Günümüz Türkçesine uyarlama</p>
-    <p>Metin kaynakları: <a href="https://www.kulturportali.gov.tr/" target="_blank" rel="noopener">T.C. Kültür Portalı</a></p>
-    <small>Eğitim amaçlı web tasarım projesi · Görseller yapay zekâ ile üretildi.</small>
-  </footer>
-
-  <!-- ======================================================================
-       2. CSS
-       ====================================================================== -->
   <style>
     /* ==========================================================================
        MASAL BAHÇESİ — STİL DOSYASI
@@ -1727,10 +1062,665 @@
       }
     }
   </style>
+</head>
 
-  <!-- ======================================================================
-       3. JAVASCRIPT
-       ====================================================================== -->
+<body>
+  <!-- ÜST MENÜ -->
+  <header class="ust">
+    <a class="logo" href="#anasayfa">masal bahçesi</a>
+    <nav aria-label="Ana menü">
+      <a class="aktif" href="#anasayfa">Başlangıç</a>
+      <a href="#masallar">Masallar</a>
+      <a class="favori-link" href="#favoriler">Favorilerim <span class="favori-adet" id="favori-sayisi" aria-live="polite">0</span></a>
+      <a href="#hakkinda">Hakkında</a>
+    </nav>
+    <span class="ust-not">Anadolu halk anlatılarından bir seçki</span>
+  </header>
+
+  <main id="anasayfa-alani">
+
+    <!-- GİRİŞ -->
+    <section class="hero" id="anasayfa">
+      <div class="hero-icerik">
+        <div class="kucuk-etiket">ANADOLU MASALLARI · SAYI 01</div>
+        <h1>Bir varmış,<br><em>bir yokmuş...</em></h1>
+        <p>Sekiz halk masalı, günümüz Türkçesinde. Kurnaz hayvanlar, beklenmedik yolculuklar ve kuşaktan kuşağa aktarılan hikâyeler.</p>
+        <a class="ana-buton" href="#masallar">Masalları incele</a>
+        <div class="hero-alt">
+          <span>8 MASAL</span>
+          <span>GÜNÜMÜZ TÜRKÇESİNE UYARLAMA</span>
+        </div>
+      </div>
+      <div class="hero-cizim">
+        <div class="hero-resim gorsel1" role="img" aria-label="Anadolu köyü, açık masal kitabı ve fener içeren suluboya illüstrasyon"></div>
+      </div>
+    </section>
+
+    <!-- MASAL KATALOĞU -->
+    <section class="katalog" id="masallar">
+      <div class="baslik-ust">SEÇKİ / 01—08</div>
+      <div class="bolum-baslik">
+        <div>
+          <h2>Masalları keşfet.</h2>
+          <p>Bir başlık seç ve hikâyeye en başından başla.</p>
+        </div>
+        <span class="adet" id="adet">8 MASAL</span>
+      </div>
+
+      <div class="araclar">
+        <label class="arama">
+          <span>⌕</span>
+          <input type="search" id="arama" placeholder="Bir masal ara..." aria-label="Masallarda ara">
+        </label>
+        <div class="filtreler" role="group" aria-label="Masal türüne göre filtrele">
+          <button type="button" class="secili" data-filtre="Tümü">Tümü</button>
+          <button type="button" data-filtre="Hayvan masalı">Hayvan masalları</button>
+          <button type="button" data-filtre="Öğüt masalı">Öğüt masalları</button>
+          <button type="button" data-filtre="Olağanüstü masal">Olağanüstü masallar</button>
+          <button type="button" data-filtre="Halk hikâyesi">Halk hikâyeleri</button>
+        </div>
+      </div>
+
+      <div class="kartlar" id="kartlar">
+          <div class="masal-ogesi" data-masal="felek">
+            <button type="button" class="kart-favori" data-favori="felek" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-felek" data-arama="Felek Sadakat ve iyilik" data-tur="Halk hikâyesi">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel2" role="img" aria-label="Felek: Ağa için altın dolu heybe bulan hizmetçi"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">01</span>
+                <h3>Felek</h3>
+                <p>Sadakat ve iyilik</p>
+                <div class="kart-alt">
+                  <span>Halk hikâyesi</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="uc-haylaz">
+            <button type="button" class="kart-favori" data-favori="uc-haylaz" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-uc-haylaz" data-arama="Üç Haylaz Masalı Macera ve düşünceli davranmak" data-tur="Hayvan masalı">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel3" role="img" aria-label="Üç Haylaz Masalı: Horoz, hindi ve ördek yolda"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">02</span>
+                <h3>Üç Haylaz Masalı</h3>
+                <p>Macera ve düşünceli davranmak</p>
+                <div class="kart-alt">
+                  <span>Hayvan masalı</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="dervis">
+            <button type="button" class="kart-favori" data-favori="dervis" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-dervis" data-arama="Derviş İyilik ve davranışların sonuçları" data-tur="Öğüt masalı">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel4" role="img" aria-label="Derviş: Dervişe katmer veren yaşlı kadın"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">03</span>
+                <h3>Derviş</h3>
+                <p>İyilik ve davranışların sonuçları</p>
+                <div class="kart-alt">
+                  <span>Öğüt masalı</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="incili-cadir">
+            <button type="button" class="kart-favori" data-favori="incili-cadir" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-incili-cadir" data-arama="İncili Çadır Merak ve keşif" data-tur="Olağanüstü masal">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel5" role="img" aria-label="İncili Çadır: Genç kızın karşısına çıkan incilerle süslü çadır"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">04</span>
+                <h3>İncili Çadır</h3>
+                <p>Merak ve keşif</p>
+                <div class="kart-alt">
+                  <span>Olağanüstü masal</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="oksuz-kiz">
+            <button type="button" class="kart-favori" data-favori="oksuz-kiz" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-oksuz-kiz" data-arama="Öksüz Kız Umut ve iyilik" data-tur="Olağanüstü masal">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel6" role="img" aria-label="Öksüz Kız: Öksüz kızın konuşan ineğiyle arkadaşlığı"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">05</span>
+                <h3>Öksüz Kız</h3>
+                <p>Umut ve iyilik</p>
+                <div class="kart-alt">
+                  <span>Olağanüstü masal</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="kurnaz-kurt">
+            <button type="button" class="kart-favori" data-favori="kurnaz-kurt" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-kurnaz-kurt" data-arama="Kurnaz Kurt Masalı Kurnazlık ve korku" data-tur="Hayvan masalı">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel7" role="img" aria-label="Kurnaz Kurt Masalı: Köylülerin karşısındaki kurt"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">06</span>
+                <h3>Kurnaz Kurt Masalı</h3>
+                <p>Kurnazlık ve korku</p>
+                <div class="kart-alt">
+                  <span>Hayvan masalı</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="dort-ogut">
+            <button type="button" class="kart-favori" data-favori="dort-ogut" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-dort-ogut" data-arama="Dört Öğüt Bilgelik ve sabır" data-tur="Öğüt masalı">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel8" role="img" aria-label="Dört Öğüt: Yola çıkacak adama öğüt verilmesi"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">07</span>
+                <h3>Dört Öğüt</h3>
+                <p>Bilgelik ve sabır</p>
+                <div class="kart-alt">
+                  <span>Öğüt masalı</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="masal-ogesi" data-masal="inatci-horuz">
+            <button type="button" class="kart-favori" data-favori="inatci-horuz" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
+            <a class="masal-kart" href="#oku-inatci-horuz" data-arama="İnatçı Horoz Israr ve beklenmedik sonuçlar" data-tur="Hayvan masalı">
+              <div class="kart-kapak">
+                <div class="masal-resim gorsel9" role="img" aria-label="İnatçı Horoz: Kaval çalan horoz"></div>
+              </div>
+              <div class="kart-bilgi">
+                <span class="kart-sayi">08</span>
+                <h3>İnatçı Horoz</h3>
+                <p>Israr ve beklenmedik sonuçlar</p>
+                <div class="kart-alt">
+                  <span>Hayvan masalı</span>
+                  <span class="kart-ok">OKU →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+      </div>
+
+      <p class="bos" id="bos" hidden>Aradığın masalı bulamadık. Başka bir kelime dene.</p>
+    </section>
+
+    <!-- FAVORİLER -->
+    <section class="favoriler-bolum" id="favoriler" aria-labelledby="favoriler-baslik">
+      <div class="baslik-ust">KİŞİSEL SEÇKİN</div>
+      <div class="bolum-baslik">
+        <div>
+          <h2 id="favoriler-baslik">Favorilerim.</h2>
+          <p>Sevdiğin masalları burada bir araya getir ve dilediğin zaman yeniden oku.</p>
+        </div>
+        <span class="adet" id="favori-toplam" aria-live="polite">0 FAVORİ</span>
+      </div>
+
+      <div class="kartlar" id="favori-kartlar" hidden></div>
+
+      <div class="favori-bos" id="favori-bos">
+        <p>Henüz favori masalın yok. Beğendiğin masalın kalp simgesine dokunarak buraya ekleyebilirsin.</p>
+        <a href="#masallar">Masalları keşfet →</a>
+      </div>
+    </section>
+
+    <!-- MASAL METİNLERİ: Seçilen masal adres çubuğundaki #oku-... ile açılır. -->
+    <div id="hikayeler" aria-label="Masal okuma bölümü">
+        <section class="hikaye-panel" id="oku-felek" aria-labelledby="baslik-felek">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Halk hikâyesi</span>
+              <h1 id="baslik-felek">Felek</h1>
+              <p>Sadakat ve iyilik</p>
+              <button type="button" class="okuma-favori" data-favori="felek" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel2" role="img" aria-label="Felek: Ağa için altın dolu heybe bulan hizmetçi"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <article class="masal-metin">
+              <p>Bir zamanlar köylerden birinde, ailesiyle birlikte yaşayan varlıklı bir ağa varmış. Evi kalabalık, sofrası bereketliymiş. Çalışanları da onun yanında güven içinde yaşarmış. Ancak yıllar geçtikçe ağanın işleri bozulmuş, serveti azalmış. Eskisi kadar sözü de dinlenmez olmuş.</p>
+              <p>Bir akşam ağa, eşiyle birlikte ocağın başında otururken derin bir iç çekmiş: “Ah, felek!”</p>
+              <p>Yanlarında oturan genç hizmetçi şaşırmış. “Ağam, bir sorun mu var? Yanlış bir şey mi yaptık?” diye sormuş. Ağa başını sallamış: “Senin bir suçun yok evladım. Bütün bunları bana felek yaptı.”</p>
+              <p>Hizmetçi, ağasının sözlerini çok ciddiye almış. Feleğin kim olduğunu bilmiyormuş ama ağasını üzen bu kişiyi bulmaya karar vermiş. İki gün sonra ağanın eşinden yolculuk için bir torba ekmek istemiş. Nereye gittiğini söylemeden köyden ayrılmış.</p>
+              <p>Az gitmiş, uz gitmiş; köyleri, kasabaları dolaşmış. Bir gün bir kahvehaneye uğramış. Oturup dinlenirken müşterilerden biri garsona seslenmiş: “Felek, şu misafire bir çay getir!”</p>
+              <p>Hizmetçi duyduklarına inanamamış. İçinden, “Sonunda feleği buldum!” diye sevinmiş. Çayını içmiş, akşam olana kadar beklemiş. Herkes ayrılınca yalnızca garsonla kendisi kalmış.</p>
+              <p>Garson, “Kalacak yerin yoksa bu gece misafirim ol,” demiş. Fakat hizmetçi kapıyı kilitlemiş, anahtarı cebine koymuş ve garsonun karşısına dikilmiş: “Ağamın hakkını geri ver!”</p>
+              <p>Garson neye uğradığını şaşırmış. “Hangi ağa? Hangi hak? Ben sadece burada çalışan Felek'im,” diye anlatmaya çalışmış. Hizmetçi ise onun sözlerine inanmamış. Tartışma büyümüş; garson da korkuya kapılmış.</p>
+              <p>Sonunda garson, başından kurtulmak için bir yol düşünmüş: “Peki, hakkını göstereceğim. Dışarıda üç kavak var. İlk ikisinin değil, üçüncü ağacın dibini kaz. Aradığını orada bulacaksın.”</p>
+              <p>Hizmetçiye bir kazma ve kürek vermiş. Genç adam dışarı çıkınca garson hemen kahvehaneye dönmüş, kapıyı kilitleyip arkasına masaları dayamış. Bu garip olaydan sonra uyumaya çalışmış ama korkudan gözüne uyku girmemiş.</p>
+              <p>Bir süre sonra kapı çalınmış. “Açmam!” diye bağırmış garson. Dışarıdan hizmetçinin sesi duyulmuş: “Sana dokunmayacağım. Yalnızca bir heybe ver!”</p>
+              <p>Garson, kapıyı azıcık aralayıp heybeyi uzatmış. Hizmetçi uzaklaşmış. Çok geçmeden de heybeyi güçlükle taşıyarak geri dönmüş. Heybenin içi altınla doluymuş! Garson da hizmetçi de şaşkına dönmüş. Meğer üçüncü kavağın dibinde gerçekten bir hazine varmış.</p>
+              <p>Sabah olunca hizmetçi altınlarla birlikte yola koyulmuş. Günler sonra köyüne dönüp heybeyi ağasının önüne bırakmış: “Ağam, feleği buldum. Sana ait olduğunu düşündüğüm hakkı geri getirdim.”</p>
+              <p>Ağa ile eşi gördüklerine inanamamış. Ağa, altınların bir kısmını sadık hizmetçisine vermiş. Genç adam da vedalaşıp kendi köyüne dönmüş.</p>
+              <p>Ağa, “Biz onun kaçtığını sanıyorduk,” demiş eşine. “Oysa bizi düşünerek yollara düşmüş. Dünyada ne kadar temiz kalpli insanlar var!” O günden sonra hizmetçinin bağlılığını hiç unutmamışlar.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/felek" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-uc-haylaz">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>Üç Haylaz Masalı</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-uc-haylaz" aria-labelledby="baslik-uc-haylaz">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Hayvan masalı</span>
+              <h1 id="baslik-uc-haylaz">Üç Haylaz Masalı</h1>
+              <p>Macera ve düşünceli davranmak</p>
+              <button type="button" class="okuma-favori" data-favori="uc-haylaz" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel3" role="img" aria-label="Üç Haylaz Masalı: Horoz, hindi ve ördek yolda"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
+
+            <article class="masal-metin">
+              <p>Bir varmış, bir yokmuş. Uzak bir ülkede, çiçeklerle çevrili bir çiftlik varmış. Bu çiftlikte birbirinden ayrılmayan üç arkadaş yaşarmış: Kısa boylu bir horoz, gururlu bir hindi ve paytak paytak yürüyen bir ördek.</p>
+              <p>Üçü de çiftlikte her gün aynı şeyleri yapmaktan sıkılmış. Bir gün bir araya gelip konuşmuşlar. “Dışarıda kocaman bir dünya var,” demiş horoz. Hindi, “Dağları aşalım, yeni yerler görelim,” diye eklemiş. Ördek de heyecanla başını sallamış. Böylece fazla düşünmeden çiftlikten ayrılmaya karar vermişler.</p>
+              <p>Sabah erkenden yola çıkmışlar. Çiçekli tarlalardan geçmiş, dereleri aşmış, yemyeşil tepelerde dolaşmışlar. Güneş ışıl ışılmış; üç arkadaş da özgürlüğün tadını çıkarıyormuş. Başta her şey çok güzelmiş.</p>
+              <p>Fakat günler geçtikçe işleri zorlaşmış. Ne önlerine yem koyan biri varmış ne de onlara su getiren. Geceler soğuk, yollar yorucuymuş. Üçü de eski çiftliklerini özlemeye başlamış.</p>
+              <p>“Orada yemeğimiz hazırdı,” demiş ördek. “Kendimizi bu kadar düşüncesizce yola atmasaydık,” diye söylenmiş hindi. Horoz da hak vermiş ama geri dönmeyi gururlarına yedirememişler.</p>
+              <p>Akşam karanlığı çökerken dağın yamacında dev gibi bir yaratık belirmiş. Üç arkadaş korkudan oldukları yerde kalakalmış. Sonra birbirlerine bakıp var güçleriyle kaçmışlar.</p>
+              <p>Az gitmişler, uz gitmişler; sonunda kendilerini Hindistan'da bulmuşlar. Burası kalabalık, hareketli, eğlenceli bir yermiş. İnsanlar gösterileri izlemekten çok hoşlanıyormuş. Üç arkadaş da yeteneklerini kullanıp küçük gösteriler yapmaya başlamış. Horoz ötmüş, hindi kabarmış, ördek komik adımlar atmış. Böylece para kazanmışlar.</p>
+              <p>“Artık geçinecek kadar paramız var,” demişler. “Eve dönme zamanı!”</p>
+              <p>Ama dönüş yolunda bir mağara görmüşler. Merak edip içeri girdiklerinde gözlerine inanamamışlar: Her yer değerli eşyalar ve hazinelerle doluymuş. Mağaranın, dağda karşılaştıkları deve ait olduğunu bilmiyorlarmış.</p>
+              <p>Başta yalnızca bakacaklarını söylemişler. Sonra daha fazlasını istemiş, yanlarına alabildikleri kadar hazine toplamaya başlamışlar. Tam mağaradan çıkacakları sırada bir tilki ortaya çıkmış. Üç haylaz, onun elinden kurtulamamış.</p>
+              <p>Bu masalın sonunda anlatıcı şu öğüdü verir: Düşünmeden alınan kararlar ve açgözlülük, insanı beklemediği tehlikelere sürükleyebilir.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/uchaylazmasali" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-dervis">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>Derviş</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-dervis" aria-labelledby="baslik-dervis">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Öğüt masalı</span>
+              <h1 id="baslik-dervis">Derviş</h1>
+              <p>İyilik ve davranışların sonuçları</p>
+              <button type="button" class="okuma-favori" data-favori="dervis" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel4" role="img" aria-label="Derviş: Dervişe katmer veren yaşlı kadın"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
+
+            <article class="masal-metin">
+              <p>Bir zamanlar bir köyde yaşlı bir kadın yaşarmış. Bu kadının evine her gün bir derviş uğrarmış. Derviş, her geldiğinde aynı sözü söylermiş: “İnsan ne yaparsa sonunda kendine yapar.”</p>
+              <p>Kadın, dervişin bu sözünü duymaktan iyice bıkmış. Bir gün kendi kendine, “Keşke artık gelmese!” diye söylenmiş. Ne yazık ki öfkesine yenik düşüp çok kötü bir karar vermiş: Bir katmer hazırlamış ve içine zehir koymuş.</p>
+              <p>Derviş o gün de kapıyı çalmış. Her zamanki gibi, “İnsan ne yaparsa sonunda kendine yapar,” demiş. Kadın katmeri ona vermiş. Derviş teşekkür etmiş, yiyeceği yanına alıp yola çıkmış.</p>
+              <p>Bir süre sonra karşısına askerlikten dönen genç bir adam çıkmış. Delikanlı çok acıkmış; uzun süredir ağzına lokma koymamış. Dervişin elindeki katmeri görünce, “Amca, çok açım. Yiyeceğinden biraz verir misin?” diye rica etmiş.</p>
+              <p>Derviş, katmerin içinde ne olduğunu bilmediği için hiç düşünmeden onu gence vermiş. Genç adam katmeri yemiş ve kısa bir süre sonra kendini kötü hissetmeye başlamış. Güçlükle evine ulaşmış.</p>
+              <p>Annesi onu bu hâlde görünce telaşlanmış. “Ne oldu sana oğlum?” diye sormuş. Genç, yolda tanıştığı dervişin verdiği katmeri yediğini, ardından hastalandığını anlatmış.</p>
+              <p>Kadın duyduklarına inanamamış. Çünkü genç adam, kadının askerlikten dönen kendi oğluymuş. Zehirli katmeri de dervişe vermek için kendisi hazırlamış! Yaptığının sonucunu anladığında büyük bir pişmanlık yaşamış. Ancak artık çok geçmiş; oğlu hayatını kaybetmiş.</p>
+              <p>Kadın, dervişin sürekli tekrarladığı sözü hatırlamış: “İnsan ne yaparsa sonunda kendine yapar.”</p>
+              <p>Masal, başkasına zarar vermek için yapılan kötülüğün dönüp insanın kendi hayatını da altüst edebileceğini anlatır.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/dervis" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-incili-cadir">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>İncili Çadır</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-incili-cadir" aria-labelledby="baslik-incili-cadir">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Olağanüstü masal</span>
+              <h1 id="baslik-incili-cadir">İncili Çadır</h1>
+              <p>Merak ve keşif</p>
+              <button type="button" class="okuma-favori" data-favori="incili-cadir" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel5" role="img" aria-label="İncili Çadır: Genç kızın karşısına çıkan incilerle süslü çadır"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <article class="masal-metin">
+              <p>Bir varmış, bir yokmuş. Çok eski zamanlarda, bir padişah ile eşi uzun yıllar çocuk sahibi olamamış. Bu durum ikisini de üzüyormuş. Bir gün padişah, derdine çare aramak için vezirlerini yanına alıp yolculuğa çıkmış.</p>
+              <p>Günlerce yol aldıktan sonra dinlenmek için mola vermişler. Tam o sırada tepelerin ardından ak sakallı, güler yüzlü bir ihtiyar gelmiş. Padişahın yanına yaklaşarak onu selamlamış. Padişah şaşırmış: “Kim olduğumu biliyorsan derdimi de biliyorsundur,” demiş.</p>
+              <p>İhtiyar, “Biliyorum,” diye cevap vermiş. Cebinden bir elma çıkarıp padişaha uzatmış: “Bunun yarısını sen, yarısını eşin yesin. Umudunuzu da kaybetmeyin.” Sonra gözden kaybolmuş.</p>
+              <p>Bir süre sonra padişah ile eşinin bir kızları olmuş. Bebek büyüdükçe güzelleşmiş. Bir gün yaşlı vezirlerden biri, güzelliğinin ileride başlarına dert açabileceğini söylemiş. Padişah da bu sözlerden etkilenip kızını koruyacağını düşünerek yerin altında bir saray yaptırmış.</p>
+              <p>Küçük kız, dadısıyla birlikte bu sarayda büyümüş. Dadısı ona okumayı, yazmayı ve pek çok şeyi öğretmiş; ancak dışarıdaki dünyadan hiç söz etmemiş. Kızın güneşten, ağaçlardan, gökyüzünden haberi olmamış.</p>
+              <p>Yıllar geçmiş, genç kız on beş yaşına gelmiş. Bir akşam yemek yerken dadısı, “Kemiğe dikkat et, boğazına kaçmasın,” demiş. Kız kemiği pencereden atmak istemiş ama camı kırmış. İçeriye ince bir ışık süzülmüş.</p>
+              <p>Genç kız daha önce hiç görmediği bu parlak şeyi yakalamaya çalışmış. Sonra ışığın nereden geldiğini merak etmiş. Gece herkes uyurken gizlice dışarı çıkmış. İlk kez ay ışığını, tepeleri ve uzaktaki evleri görmüş.</p>
+              <p>Yakınlarda, ışıkları yanan birçok çadır varmış. Bunların arasında incilerle süslenmiş bir çadır dikkatini çekmiş. Kapıdaki nöbetçiler uyuyormuş. Kız içeri girmiş. Çadırın içinde uyuyan bir delikanlı, bir masa dolusu yiyecek, bir bardak su, katlanmış bir gömlek ve iki şamdan varmış.</p>
+              <p>Kız merakına yenilmiş. Gömleği açmış, şamdanların yerlerini değiştirmiş, yemeklerden biraz yemiş ve suyun yarısını içmiş. Sonra da geldiği yere dönmüş.</p>
+              <p>Delikanlı sabah uyandığında çadırdaki değişiklikleri fark etmiş. Ertesi gece uyanık kalmak için başının üstüne, içinden soğuk su damlayan bir kar torbası asmış. Genç kız yeniden geldiğinde onu görmüş ve kolundan tutarak, “Sen kimsin?” diye sormuş.</p>
+              <p>Kız, “Ben de senin gibi bir insanım,” diye cevap vermiş. O gece konuşup tanışmışlar. Ancak ertesi sabah genç kız uyandığında çadır da delikanlı da ortada yokmuş.</p>
+              <p>Meğer delikanlı başka bir ülkenin padişahının oğluymuş. Düğün öncesi gelenek gereği arkadaşlarıyla kırk gün boyunca dağda kalmış. O gün kırkıncı gün olduğu için herkes çadırlarını toplamış, ülkelerine dönmüş.</p>
+              <p>Genç kız üzülmüş ama vazgeçmemiş. Yoldan geçen bir çobandan buranın adının Şehvaneli olduğunu öğrenmiş. Üzerindeki değerli eşyaları çobana verip karşılığında eski kıyafetlerini ve başına geçireceği bir koyun postu almış. Böylece kılık değiştirip yola çıkmış. Kendisine de “Abdal” adını vermiş.</p>
+              <p>Sonunda padişahın oğluyla karşılaşmış. Delikanlı, “Nereden geliyorsun?” diye sormuş. “Şehvaneli'den,” demiş Abdal. “Orada ne gördün?”</p>
+              <p>“İncilerle süslü bir çadır, açılmış bir gömlek, yerleri değişmiş şamdanlar ve sevdiğini arayan bir genç kız,” diye cevap vermiş. Ardından çadırdaki geceyi hatırlatan sözler söylemiş.</p>
+              <p>Delikanlı bu sözlerden karşısındaki kişinin aradığı genç kız olduğunu anlamış. Birbirlerine kavuşmuşlar ve masal, onların mutluluğuyla sona ermiş.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/incilicadir" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-oksuz-kiz">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>Öksüz Kız</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-oksuz-kiz" aria-labelledby="baslik-oksuz-kiz">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Olağanüstü masal</span>
+              <h1 id="baslik-oksuz-kiz">Öksüz Kız</h1>
+              <p>Umut ve iyilik</p>
+              <button type="button" class="okuma-favori" data-favori="oksuz-kiz" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel6" role="img" aria-label="Öksüz Kız: Öksüz kızın konuşan ineğiyle arkadaşlığı"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
+
+            <article class="masal-metin">
+              <p>Bir zamanlar annesi, babası ve kendisiyle yaşayan küçük bir kız varmış. Annesi ölünce babası yeniden evlenmiş. Yeni eşi, yani kızın üvey annesi, ona hiç iyi davranmıyormuş.</p>
+              <p>Her gün kızı hayvanları otlatması için kırın yoluna gönderir, yanına da yalnızca bir dilim arpa ekmeği verirmiş. Küçük kız açlıktan ve üzüntüden ağlarmış. Bir gün otlattığı inek konuşmaya başlamış: “Üzülme. Ekmeğini bana ver. Sen de kulağıma gir; içeride güzel yemekler bulacaksın.”</p>
+              <p>Kız önce şaşırmış, sonra ineğin dediğini yapmış. Gerçekten de ineğin kulağında çeşit çeşit yiyecek varmış. O günden sonra karnını doyurabiliyormuş.</p>
+              <p>Üvey anne, kendi kızına güzel yemekler yedirdiği hâlde öksüz kızın giderek daha sağlıklı ve neşeli olduğunu görünce şüphelenmiş. Bir gün kendi kızını aynı arpa ekmeğiyle kırın yoluna göndermiş. Ancak inek ona yardım etmemiş. Kız, sert ekmeği yiyemediğini söyleyerek eve dönmüş.</p>
+              <p>Üvey anne bu kez öksüz kıza bir tutam pamuk ve bir iğ vermiş: “Akşama kadar bunlardan incecik iplik eğireceksin!”</p>
+              <p>Küçük kız yine ağlamaya başlamış. İnek onun neden üzüldüğünü sorunca olanları anlatmış. İnek, “Pamuğu bana ver,” demiş. Pamuğu yutmuş, kulağından da çok ince bir iplik çıkarmış. Kız ipliği düzgünce sarmış ve eve götürmüş.</p>
+              <p>Herkes kızın bu kadar güzel iplik eğirmesine şaşırmış. Üvey anne, ineğin yardım ettiğini anlayınca hayvanı kestirmeye karar vermiş. Babası itiraz etse de onu vazgeçirememiş. Küçük kız, çok sevdiği ineğinin yanına gidip ağlamış.</p>
+              <p>İnek son kez konuşmuş: “Benim için üzülme. Kemiklerimi beyaz bir beze sarıp yemliğin altına koy. Zamanı gelince sana yardım ederler.”</p>
+              <p>Kız, ineğin söylediklerini yapmış. Aradan birkaç ay geçmiş. Bir gün sarayda büyük bir düğün yapılacağı duyurulmuş. Üvey anne kendi kızını hazırlamış, öksüz kızıysa evde bırakmış. Üstelik ona yapılması neredeyse imkânsız iki iş vermiş: Büyük bir kazanı gözyaşıyla dolduracak, birbirine karıştırılmış buğday ve mercimekleri ayıracakmış.</p>
+              <p>Kız ağlarken kapıdan geçen bir tuz satıcısı onu görmüş. Durumu öğrenince, “Gözyaşı tuzludur. Kazana su ve tuz koyarsan sana verilen işi yerine getirmiş olursun,” demiş. Biraz sonra kapıdan geçen kalbur satıcıları da buğdayla mercimeği elekten geçirip ayırmasına yardım etmiş.</p>
+              <p>İşler bitince kız, ineğin kemiklerini bıraktığı yere gitmiş. Yemliğin altında güzel elbiseler ve bir at bulmuş. Hemen giyinip ata binmiş, saraydaki düğüne gitmiş.</p>
+              <p>Düğüne katılanlar, öksüz kızı görünce onu bir padişah kızı sanmışlar. Üvey anneyle kızı bile onu tanıyamamış. Küçük kız bir süre eğlendikten sonra eve herkesten önce dönmek için aceleyle ayrılmış. Ancak yolda ayakkabılarından biri çeşmeye düşmüş.</p>
+              <p>Daha sonra padişahın oğlu atını sulamak için çeşmeye geldiğinde ayakkabıyı bulmuş. Sahibinin kim olduğunu merak etmiş ve “Bu ayakkabı kimin ayağına uyarsa onunla evleneceğim,” demiş.</p>
+              <p>Ayakkabı pek çok kişiye denenmiş; kimine büyük, kimine küçük gelmiş. Sonunda öksüz kızın ayağına tam olmuş. Böylece düğündeki gizemli kızın kim olduğu anlaşılmış. Padişahın oğluyla evlenmiş, zorlu günleri geride kalmış.</p>
+              <p>Masal, iyiliğin ve umudun en zor zamanlarda bile insanın yolunu aydınlatabileceğini anlatır.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="kredi">Kültür Portalı kaynak sayfasında belirtilen illüstratör: Özlem Mengilli. Orijinal kaynak görseli bu sitede kullanılmamıştır.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/oksuzkiz" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-kurnaz-kurt">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>Kurnaz Kurt Masalı</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-kurnaz-kurt" aria-labelledby="baslik-kurnaz-kurt">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Hayvan masalı</span>
+              <h1 id="baslik-kurnaz-kurt">Kurnaz Kurt Masalı</h1>
+              <p>Kurnazlık ve korku</p>
+              <button type="button" class="okuma-favori" data-favori="kurnaz-kurt" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel7" role="img" aria-label="Kurnaz Kurt Masalı: Köylülerin karşısındaki kurt"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
+
+            <article class="masal-metin">
+              <p>Bir varmış, bir yokmuş. Uzak bir dağın tepesinde çok kurnaz ve güçlü bir kurt yaşarmış. Geceleri dağdan iner, köydeki hayvanlara saldırırmış. Köylüler onun yüzünden büyük sıkıntı çekiyormuş.</p>
+              <p>Bir gün köylüler bir araya gelmiş. “Böyle devam edemeyiz,” demişler. Kurdu yakalamak için dağa çıkmış, günlerce iz sürmüşler. Sonunda birkaç tuzak kurmayı başarmış ve kurdu yakalayıp köy odasına getirmişler.</p>
+              <p>Köylüler kurda sormuş: “Neden hayvanlarımızı yiyorsun? Geçimimizi onlarla sağlıyoruz.”</p>
+              <p>Kurt, “Ben de aç kalıyorum,” diye cevap vermiş. “Siz ekmek yiyorsunuz, ben et. Her gün bana bir kilo et getirirseniz hayvanlarınıza dokunmam.”</p>
+              <p>Köylüler başka çare bulamamış ve kabul etmiş. Kurda dağda bir yer hazırlamışlar. Her gün bir aile sırası geldiğinde ona et götürüyormuş.</p>
+              <p>Fakat zaman geçmiş, bu anlaşma köylülerin işini daha da zorlaştırmış. Hayvanları azalmış, yiyecek bulmak güçleşmiş. Sonunda kurda et götürmeyi bırakmışlar.</p>
+              <p>Kurt bir gün beklemiş, iki gün beklemiş. Kimse gelmeyince açlıktan öfkelenmiş. Yuvasından çıkıp yeniden köye inmiş. O sırada otlayan bir eşekle sıpasını görmüş. İkisine de saldırıp etlerinden birer parça yemiş. Sonra yuvasına dönmüş.</p>
+              <p>Eşekle sıpa yaralı hâlde evlerine gelince sahipleri çok üzülmüş. Olanları diğer köylülere anlatmış. Köylüler kurdu bir kez daha yakalayıp köy odasına getirmiş.</p>
+              <p>“Bize söz vermiştin,” demişler. “Neden eşeğe ve sıpaya saldırdın?”</p>
+              <p>Kurt soğukkanlı görünmeye çalışmış: “Et getirmezseniz hayvanlarınızı yine yerim!”</p>
+              <p>Köylüler, “Ama artık neredeyse hiç hayvanımız kalmadı,” deyince kurt daha da sert konuşmuş: “Beni ilgilendirmez. İstersem size de zarar veririm!”</p>
+              <p>Bu sözleri duyan köylüler korkmuş ve odadan çıkmış. Kurt ise kimse kalmayınca derin bir nefes almış. Aslında o da köylülerden çok korkuyormuş! Sadece güçlü görünerek kendini kurtarmaya çalışmış.</p>
+              <p>Kurt fırsattan yararlanıp köyden kaçmış. Uzak diyarlara gitmiş ve bir daha geri dönmemiş. Köylüler de sonunda rahat bir nefes almış.</p>
+              <p>Masal, korkutarak güçlü görünmeye çalışan birinin bazen kendisinin de korku içinde olabileceğini hatırlatır.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="kredi">Kültür Portalı kaynak sayfasında belirtilen illüstratör: Özlem Mengilli. Orijinal kaynak görseli bu sitede kullanılmamıştır.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/kurnazkurtmasali" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-dort-ogut">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>Dört Öğüt</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-dort-ogut" aria-labelledby="baslik-dort-ogut">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Öğüt masalı</span>
+              <h1 id="baslik-dort-ogut">Dört Öğüt</h1>
+              <p>Bilgelik ve sabır</p>
+              <button type="button" class="okuma-favori" data-favori="dort-ogut" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel8" role="img" aria-label="Dört Öğüt: Yola çıkacak adama öğüt verilmesi"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <p class="icerik-uyari">Okur notu: Bu masalda ölüm, şiddet veya zorlayıcı olaylar bulunabilir. Küçük çocukların bir yetişkinle birlikte okuması önerilir.</p>
+
+            <article class="masal-metin">
+              <p>Bir zamanlar geçimini sağlamakta zorlanan genç bir adam varmış. Evlenmiş ama ailesine bakacak kadar para kazanamıyormuş. Sonunda çalışmak için uzak bir diyara gitmeye karar vermiş. Bir ağanın yanında işe başlamış; günlüğünü bile sormadan tam yirmi yıl boyunca çalışmış.</p>
+              <p>Yirmi yılın sonunda memleketini, eşini ve annesini çok özlemiş. Ağanın yanına gidip, “Artık eve dönmek istiyorum. Emeğimin karşılığını verir misin?” demiş. Ağa ona üç lira vermiş. Adam parayı almış. Ağanın eşi ise ona acımış, bir çörek hazırlamış. Çöreğin içine gizlice beş altın koymuş ve “Bunu yolda yeme; evine götür, eşine armağan et,” demiş.</p>
+              <p>Adam tam ayrılacakken ağa onu çağırmış: “İstersen sana bir öğüt vereyim; karşılığında bir lira isterim.” Adam bir lira vermiş. Ağa, “Gece vakti bilmediğin yollara çıkma,” demiş.</p>
+              <p>Ağa ikinci bir lira daha isteyip, “Dibini görmediğin sudan geçme,” diye öğüt vermiş. Adam son lirasını da verince üçüncü öğüdü söylemiş: “Gerçeğini bilmediğin bir konuda hüküm verme.”</p>
+              <p>Adam gitmek üzereyken ağa bu kez ücretsiz bir öğüt eklemiş: “Ne olduğunu anlamadığın işe aceleyle karışma.”</p>
+              <p>Adam, cebindeki bütün parasını vermiş olmasına rağmen öğütleri aklında tutarak yola koyulmuş.</p>
+              <p>Bir süre sonra Yozgat'a giden bir kervana rastlamış ve onlarla birlikte yürümeye başlamış. Hava kararınca adam durmuş. “Ben gece yola devam etmeyeceğim,” demiş. Kervancılar ona gülmüş ama adam kararını değiştirmemiş. Sabah yola çıktığında kervanın eşkıyaların saldırısına uğradığını ve kervancıların öldürüldüğünü görmüş. “İlk öğüt hayatımı kurtardı,” diye düşünmüş.</p>
+              <p>Yoluna devam ederken bir atlıyla karşılaşmış. Birlikte giderken önlerine derin bir ırmak çıkmış. Atlı, “Gel, atıma bin, birlikte geçelim,” demiş. Adam suyun dibini göremeyince ikinci öğüdü hatırlamış ve kabul etmemiş. Atlı ırmağa girmiş ama akıntıya kapılarak kaybolmuş. Adam başka bir geçit bulup yoluna devam etmiş.</p>
+              <p>Akşamüstü bir köye ulaşmış. Köy odasında konuk olmuş. İçeride garip bir manzara varmış: Bir kadın, boynuna bağlanmış bir iple duvara bağlı tutuluyor; bir köpekse yatakta uzanıyormuş. Önce köpeğe yemek veriliyor, artanı kadına bırakılıyormuş. Adam bunu görünce şaşırmış ama ne olup bittiğini bilmediği için soru sormamış.</p>
+              <p>Ertesi sabah köyün ağası onu çağırtmış. “Burada gördüklerini neden sorgulamadın?” diye sormuş. Adam, “Bana gerçeğini bilmediğim bir konuda hüküm vermemem öğütlendi,” demiş. Köyün ağası bu cevabı beğenmiş. Meğer olup biteni soran konuklara kötü davranan zalim bir adammış; bu kez konuk susunca ona dokunmamış, hatta bir heybe altın verip adamlarıyla evine göndermiş.</p>
+              <p>Yıllar sonra nihayet köyüne ulaşan adam, evinin penceresinden içeri bakmış. Eşinin yanında genç bir erkek varmış. Adam bir an kıskançlığa kapılmış; tüfeğine davranmış. Ancak son öğüt aklına gelmiş: “Gerçeğini bilmediğin işe aceleyle karışma.”</p>
+              <p>Silahını indirmiş, kapıyı çalmış. Eşi kapıyı açınca önce onu tanıyamamış, sonra sevinçle boynuna sarılmış. Adam, evde gördüğü gencin kim olduğunu sormuş. Eşi, “Sen giderken henüz doğmamış olan oğlumuz,” diye cevap vermiş.</p>
+              <p>Adam hem ailesine kavuştuğu için sevinmiş hem de acele karar vermediği için şükretmiş. O gün, ağanın öğütlerinin paradan çok daha değerli olduğunu anlamış.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/dortogut-1" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-inatci-horuz">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>İnatçı Horoz</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="hikaye-panel" id="oku-inatci-horuz" aria-labelledby="baslik-inatci-horuz">
+          <div class="okuma-wrap">
+            <a class="geri" href="#masallar">← Masal listesine dön</a>
+
+            <div class="okuma-hero">
+              <span class="okuma-tur">Hayvan masalı</span>
+              <h1 id="baslik-inatci-horuz">İnatçı Horoz</h1>
+              <p>Israr ve beklenmedik sonuçlar</p>
+              <button type="button" class="okuma-favori" data-favori="inatci-horuz" aria-pressed="false">♡ Favorilere ekle</button>
+              <div class="okuma-kapak">
+                <div class="masal-resim gorsel9" role="img" aria-label="İnatçı Horoz: Kaval çalan horoz"></div>
+              </div>
+            </div>
+
+            <div class="okuma-kontrol">
+              <span>OKUMA AYARLARI</span>
+              <div class="okuma-butonlar">
+                <button type="button" data-boyut="-2" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" data-boyut="2" aria-label="Yazıyı büyüt">A+</button>
+              </div>
+            </div>
+
+            <article class="masal-metin">
+              <p>Bir varmış, bir yokmuş. Bir köyde çok inatçı bir horoz yaşarmış. Bir gün çöplükte eşelenirken ayağına bir diken batmış. Canı yanınca yakındaki evin kapısını çalmış. Evdeki yaşlı kadın horoza yardım etmiş ve dikeni ayağından çıkarmış.</p>
+              <p>Horoz teşekkür edip gitmiş. Fakat birkaç gün sonra geri dönmüş: “Nine, ayağımdan çıkardığın dikeni geri ver!” demiş.</p>
+              <p>Kadın şaşırmış. “O dikeni çoktan mangala atıp yaktım,” diye cevap vermiş. Horoz, “Öyleyse ya dikenimi verirsin ya da mangalı alırım!” diye tutturmuş. Kadın ne dediyse horozu ikna edememiş. Sonunda mangalı verip onu uğurlamış.</p>
+              <p>Horoz mangalı sırtına alarak yola çıkmış. Bir başka eve gelmiş. Ev sahibine, “Bu mangalı biraz burada bırakayım, dönüşte alırım,” demiş. Kadın da mangalı ahıra koymuş.</p>
+              <p>Bir süre sonra horoz geri gelmiş. Fakat kadın, “Ahırdaki inek mangalı kırdı,” demiş. Horoz hemen itiraz etmiş: “Ya mangalımı verirsin ya da ineğini alırım!”</p>
+              <p>Kadın yine uzun uzun konuşmuş ama horoz inat etmiş. Sonunda ineği ona vermiş.</p>
+              <p>Horoz bu kez ineği önüne katıp yürümüş. Başka bir eve vardığında ineği oraya emanet etmiş ve yoluna devam etmiş. Günlerce dolaşıp geri döndüğünde evde düğün hazırlığı varmış. Ev sahibi ona, “İneğini kestik; şimdi ne yapacağız?” demiş.</p>
+              <p>Horoz gözünü düğündeki geline dikmiş. “Öyleyse gelini alırım!” diye tutturmuş. Ev sahibi ona altınlar önermiş, başka şeylerle gönlünü almaya çalışmış ama horoz bir türlü vazgeçmemiş. Masalın eski anlatısında, sonunda gelin onunla birlikte yola çıkmış.</p>
+              <p>Yolda bir çobana rastlamışlar. Çoban kaval çalıyormuş. Horoz melodiyi çok sevmiş. Bu kez kavalı istemiş ve karşılığında gelini çobana bırakmış.</p>
+              <p>Kavalı alıp kümesine dönmüş. Tavukların karşısına geçerek başından geçenleri bir bir anlatmış: “Dikenimi verdim, mangal aldım. Mangalımı verdim, inek aldım. İneğimi verdim, gelin aldım. Gelini verdim, kaval aldım!”</p>
+              <p>Sonra kavalına üflemiş: “Düüüt!” Ve böylece inatçı horozun tuhaf yolculuğu sona ermiş.</p>
+            </article>
+
+            <p class="kredi">Görsel: Bu proje için yapay zekâ ile oluşturulmuş suluboya illüstrasyon.</p>
+            <p class="uyarlama-notu">Günümüz Türkçesine uyarlanmıştır. Olay örgüsü ve anlatının temel unsurları korunmuştur.</p>
+            <p class="kaynak">Metin kaynağı: <a href="https://www.kulturportali.gov.tr/portal/inatcihoruz" target="_blank" rel="noopener">T.C. Kültür Portalı ↗</a> <span class="kaynak-not">(Kaynak bağlantısı internet gerektirir.)</span></p>
+
+            <a class="sonraki" href="#oku-felek">
+              <span>SIRADAKİ MASAL →</span>
+              <strong>Felek</strong>
+            </a>
+          </div>
+        </section>
+    </div>
+
+    <!-- KOLEKSİYON NOTU -->
+    <section class="hakkinda" id="hakkinda">
+      <div class="arsiv-sol" aria-hidden="true">
+        <span class="arsiv-numara">MASAL BAHÇESİ / DERLEME 01</span>
+        <p class="arsiv-alinti">Bir masal, bazen yalnızca bir hikâye değil; bir kuşağın sesidir.</p>
+        <span class="arsiv-dipnot">8 anlatı  /  1 koleksiyon</span>
+      </div>
+      <div>
+        <span class="baslik-ust">BU KOLEKSİYON HAKKINDA</span>
+        <h2>Eski masallar, yeni bir okuma deneyimi.</h2>
+        <p>Bu sayfada sekiz Türk halk masalını bir araya getirdim. Metinleri, özgün olay örgülerini ve karakterlerini koruyarak günümüz Türkçesine uyarladım. Okuma alanını sade tuttum; arama, tür filtresi ve yazı boyutu kontrollerini ekledim.</p>
+        <p class="ince">Kaynak metinler T.C. Kültür Portalı’ndan alınmıştır. Geleneksel anlatıların bir bölümünde ölüm, şiddet ve zorlayıcı durumlar yer alır. Küçük okurların bir yetişkinle birlikte okuması önerilir.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ALT BİLGİ -->
+  <footer>
+    <span class="footer-mark">masal bahçesi</span>
+    <p>Türk halk masallarından bir derleme · Günümüz Türkçesine uyarlama</p>
+    <p>Metin kaynakları: <a href="https://www.kulturportali.gov.tr/" target="_blank" rel="noopener">T.C. Kültür Portalı</a></p>
+    <small>Eğitim amaçlı web tasarım projesi · Görseller yapay zekâ ile üretildi.</small>
+  </footer>
+
   <script>
     /* ==========================================================================
        MASAL BAHÇESİ — BETİK
@@ -1993,7 +1983,7 @@
   </script>
 
   <!-- ======================================================================
-       4. GÖMÜLÜ GÖRSELLER
+       GÖMÜLÜ GÖRSELLER
        Aşağıdaki uzun satırlar resimlerin kendisidir, kod okunurken atlanabilir.
        Her resim dosyada tek kez saklanır; dış bağlantı gerekmez.
        ====================================================================== -->
