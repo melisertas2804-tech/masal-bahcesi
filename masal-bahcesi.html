@@ -32,6 +32,7 @@
 
     /* 1. Temel ayarlar ve renkler
        ========================================================================== */
+    /* SUNUM 01: Renk değişkenleri */
     :root {
       --morc: #6E4D7D;
       --gul: #C97A80;
@@ -99,6 +100,7 @@
       text-decoration: none;
     }
 
+    /* SUNUM 03: Menüde flex */
     .ust nav {
       display: flex;
       align-items: center;
@@ -328,6 +330,7 @@
 
     /* 6. Masal kartları
        ========================================================================== */
+    /* SUNUM 02: Kartlarda grid */
     .kartlar {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -463,6 +466,7 @@
     /* 8. Okuma alanı
        Masal metinleri JavaScript kapalıyken de :target ile açılır.
        ========================================================================== */
+    /* SUNUM 04: Masalların gizlenmesi ve target ile açılması */
     .hikaye-panel {
       display: none;
       scroll-margin-top: 10px;
@@ -753,6 +757,7 @@
 
     /* 12. Tablet (980px ve altı)
        ========================================================================== */
+    /* SUNUM 05: 980 piksel altı */
     @media (max-width: 980px) {
       /* Dar ekranda logo tek satırda kalsın, yan not yer kaplamasın. */
       .logo {
@@ -795,6 +800,7 @@
 
     /* 13. Telefon (650px ve altı)
        ========================================================================== */
+    /* SUNUM 06: 650 piksel altı */
     @media (max-width: 650px) {
       /* Üst menü */
       .ust {
@@ -986,6 +992,7 @@
 
     /* 14. Küçük telefon (360px ve altı)
        ========================================================================== */
+    /* SUNUM 07: 360 piksel altı */
     @media (max-width: 360px) {
       /* Alt alta düşen etiketlerde ayırıcı çizgi gerekmez. */
       .hero-alt span + span {
@@ -1101,6 +1108,7 @@
         </div>
       </div>
 
+      <!-- SUNUM 08: Kartlardaki data-tur ve data-arama -->
       <div class="kartlar" id="kartlar">
           <div class="masal-ogesi" data-masal="felek">
             <button type="button" class="kart-favori" data-favori="felek" data-favori-kart aria-label="Favorilere ekle" aria-pressed="false" title="Favorilere ekle">♡</button>
@@ -1732,6 +1740,7 @@
     const filtreDugmeleri = document.querySelectorAll('[data-filtre]');
     let seciliTur = 'Tümü';
 
+    // SUNUM 09: Arama ve filtre
     function kartlariSuz() {
       const sorgu = aramaKutusu.value.toLocaleLowerCase('tr').trim();
       let gorunenSayi = 0;
@@ -1749,6 +1758,7 @@
       document.getElementById('bos').hidden = gorunenSayi !== 0;
     }
 
+    // SUNUM 10: input ve click olayları
     aramaKutusu.addEventListener('input', kartlariSuz);
 
     filtreDugmeleri.forEach(function (dugme) {
@@ -1767,6 +1777,7 @@
     const YAZI_EN_KUCUK = 15;
     const YAZI_EN_BUYUK = 29;
 
+    // SUNUM 11: Yazı boyutu
     document.querySelectorAll('[data-boyut]').forEach(function (dugme) {
       dugme.addEventListener('click', function () {
         const metin = dugme.closest('.hikaye-panel').querySelector('.masal-metin');
@@ -1783,6 +1794,7 @@
        Seçilen masalların kimlikleri aynı tarayıcıda saklanır.
        ========================================================================== */
     const FAVORI_KAYIT = 'masal_bahcesi_favoriler_v1';
+    // SUNUM 12: Favoriler Set
     const favoriler = new Set();
 
     function masalVarMi(id) {
@@ -1803,6 +1815,7 @@
       }
     }
 
+    // SUNUM 13: localStorage'a kaydetme
     function favorileriKaydet() {
       try {
         localStorage.setItem(FAVORI_KAYIT, JSON.stringify(Array.from(favoriler)));
@@ -1811,6 +1824,7 @@
       }
     }
 
+    // SUNUM 14: cloneNode ile kopyalama
     function favoriKartlariniCiz() {
       const alan = document.getElementById('favori-kartlar');
       alan.innerHTML = '';
@@ -1855,6 +1869,7 @@
       favoriDugmeleriniGuncelle();
     }
 
+    // SUNUM 15: document üzerinde dinleme ve closest
     // Favori kartları sonradan eklendiği için tıklamalar belge düzeyinde dinlenir.
     document.addEventListener('click', function (olay) {
       const dugme = olay.target.closest('[data-favori]');
@@ -1911,6 +1926,7 @@
       return aktifId;
     }
 
+    // SUNUM 16: Menüde aktif bölüm
     function menuyuGuncelle() {
       // Okunan masal "Masallar" bölümüne aittir.
       const aktifId = acikMasal() ? 'masallar' : (secilenBolumId || ekrandakiBolumId());
@@ -1926,6 +1942,7 @@
       });
     }
 
+    // SUNUM 17: Sekme başlığı
     function sayfaBasliginiGuncelle() {
       const masal = acikMasal();
       document.title = masal
