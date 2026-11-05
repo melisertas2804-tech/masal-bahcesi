@@ -134,16 +134,16 @@
        ========================================================================== */
     .hero {
       max-width: 1260px;
-      min-height: 535px;
       margin: 24px auto 0;
-      display: grid;
-      grid-template-columns: 47% 53%;
+      /* HTML'de yazı önce geldiği için ters sıralanır: görsel üstte, yazı altta. */
+      display: flex;
+      flex-direction: column-reverse;
       border: 1px solid var(--bej);
       background: var(--bej);
     }
 
     .hero-icerik {
-      padding: 68px clamp(25px, 5vw, 76px) 48px;
+      padding: 48px clamp(25px, 5vw, 76px);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -729,10 +729,10 @@
       background-position: center;
     }
 
+    /* En-boy oranı görselle aynı olduğu için görsel kırpılmadan tam görünür. */
     .hero-resim {
       width: 100%;
-      height: 100%;
-      min-height: 535px;
+      aspect-ratio: 960 / 540;
     }
 
     .kart-kapak .masal-resim {
@@ -769,17 +769,11 @@
       }
 
       .hero {
-        min-height: 450px;
         margin: 18px 15px 0;
-        grid-template-columns: 50% 50%;
       }
 
       .hero-icerik {
-        padding: 48px 30px 35px;
-      }
-
-      .hero-resim {
-        min-height: 450px;
+        padding: 40px 30px 35px;
       }
 
       .araclar {
@@ -827,21 +821,7 @@
 
       /* Giriş alanı */
       .hero {
-        min-height: 0;
         margin: 10px 10px 0;
-        display: flex;
-        flex-direction: column-reverse;
-      }
-
-      /* Görsel kırpılmadan, tam ve ortalı görünür. */
-      .hero-cizim,
-      .hero-resim {
-        height: auto;
-        min-height: 0;
-      }
-
-      .hero-resim {
-        aspect-ratio: 960 / 540;
       }
 
       .hero-icerik {
